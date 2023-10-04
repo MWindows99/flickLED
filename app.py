@@ -4,14 +4,13 @@
 import os
 import sys
 import six
-import threading
 import json
+import threading
+import socketserver
 from PIL import Image
-
-from BaseHTTPServer import HTTPServer
-import SocketServer as socketserver
-from CGIHTTPServer import CGIHTTPRequestHandler
-from Queue import Queue
+from queue import Queue
+from http.server import HTTPServer
+from http.server import CGIHTTPRequestHandler
 
 sys.path.append('./cgi-bin')
 
